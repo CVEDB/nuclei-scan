@@ -14,6 +14,5 @@ nuclei iac --tags "system:github" \
            --tags "repository:${GITHUB_REPOSITORY}" \
            --tags "branch:${GITHUB_REF_NAME}" \
            --tags "git_user:${GITHUB_ACTOR}" \
-           --nuclei-key "${INPUT_NUCLEI_KEY}" \
-           --nuclei-secret "${INPUT_NUCLEI_SECRET}" \
+           --github_secret "${INPUT_GITHUB_SECRET}" \
            "${GITHUB_WORKSPACE}"
