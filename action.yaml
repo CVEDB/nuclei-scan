@@ -2,7 +2,7 @@ name: "Nuclei Build Security"
 description: "Nuclei Scanner with upload to CVEDB build Security"
 author: "CVEDB"
 inputs:
-  nuclei_key:
+  github_secret:
     description: "Nuclei Provided by CSPM"
     required: true
     
