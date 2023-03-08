@@ -1,1 +1,21 @@
-
+name: build
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Run nuclei Build Security
+        uses: CVEDB/nuclei-scan@main
+        with:
+          nuclei_key: ${ secret.NUCLEI_KEY }
+          nuclei_secret: ${ secret.NUCLEI_SECRET }
