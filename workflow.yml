@@ -17,5 +17,4 @@ jobs:
       - name: Run nuclei Build Security
         uses: CVEDB/nuclei-scan@main
         with:
-          nuclei_key: ${ secret.NUCLEI_KEY }
-          nuclei_secret: ${ secret.NUCLEI_SECRET }
+          github_secret: ${ secret.GITHUB_SECRET }
